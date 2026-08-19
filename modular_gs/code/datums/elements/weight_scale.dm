@@ -64,6 +64,15 @@
 	
 	return message
 
+/datum/component/weight_scale/heft_scale/generate_weightee_flavor(fatness)
+	var/obj/machinery/heft_scale/scale = parent
+	if (!istype(scale))
+		return ..()
+
+	scale.generate_weight_response(fatness)
+
+	return ..()
+
 /datum/component/weight_scale/proc/on_mob_leave(datum/source)
 	SIGNAL_HANDLER
 	if (!isnull(weightee))

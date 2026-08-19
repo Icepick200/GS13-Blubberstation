@@ -26,6 +26,12 @@
 	. = ..()
 	scale_component = AddComponent(/datum/component/weight_scale)
 
+/obj/structure/scale/Destroy(force)
+	if(scale_component)
+		qdel(scale_component)
+
+	return ..()
+
 /obj/structure/scale/examine(mob/user)
 	. = ..()
 	. += span_notice("It's held together by a couple of <b>bolts</b>.")

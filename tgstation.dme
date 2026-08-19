@@ -7460,6 +7460,7 @@
 #include "modular_gs\code\modules\vore\weight_gain.dm"
 #include "modular_gs\code\modules\voting\vote.dm"
 #include "modular_gs\code\modules\weapons\grenades.dm"
+#include "modular_gs\code\modules\weighing\heft_scale.dm"
 #include "modular_gs\code\modules\weighing\scale.dm"
 #include "modular_gs\code\modules\weighing\weighing_datum.dm"
 #include "modular_gs\code\modules\weighing\weight_scanner.dm"

@@ -36,9 +36,5 @@
 	. = ..()
 	. += span_notice("It's held together by a couple of <b>bolts</b>.")
 
-/obj/structure/scale/proc/update_last_reading(mob/living/carbon/fatty, fatness)
-	SIGNAL_HANDLER
-	last_reading = fatty.calculate_weight_in_pounds()
-
 /obj/structure/scale/ui_interact(mob/user)
 	scale_component.ui_interact(user)

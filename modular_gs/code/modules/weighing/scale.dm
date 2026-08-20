@@ -28,7 +28,7 @@
 
 /obj/structure/scale/Destroy(force)
 	if(scale_component)
-		qdel(scale_component)
+		QDEL_NULL(scale_component)
 
 	return ..()
 

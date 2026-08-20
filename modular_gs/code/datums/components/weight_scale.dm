@@ -18,7 +18,7 @@
 
 /datum/component/weight_scale/Destroy(force)
 	if(weight_component)
-		qdel(weight_component)
+		QDEL_NULL(weight_component)
 
 	return ..()
 

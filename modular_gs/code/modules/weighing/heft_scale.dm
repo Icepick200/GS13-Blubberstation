@@ -26,7 +26,7 @@
 /obj/machinery/heft_scale/Destroy(force)
 	TIMER_COOLDOWN_END(src, COOLDOWN_RESPONSE)
 	if(scale_component)
-		qdel(scale_component)
+		QDEL_NULL(scale_component)
 
 	return ..()
 

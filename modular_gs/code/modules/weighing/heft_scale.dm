@@ -24,6 +24,7 @@
 	scale_component = AddComponent(/datum/component/weight_scale/heft_scale)
 
 /obj/machinery/heft_scale/Destroy(force)
+	TIMER_COOLDOWN_END(src, COOLDOWN_RESPONSE)
 	if(scale_component)
 		qdel(scale_component)
 

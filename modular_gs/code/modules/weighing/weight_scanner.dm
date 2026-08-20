@@ -30,5 +30,12 @@
 	. = ..()
 	weight_component = AddComponent(/datum/component/weigh_out)
 
+/obj/item/portable_weight_scanner/Destroy(force)
+	. = ..()
+	if(weight_component)
+		qdel(weight_component)
+
+	return ..()
+
 /obj/item/portable_weight_scanner/ui_interact(mob/user, datum/tgui/ui)
 	weight_component.ui_interact(user)

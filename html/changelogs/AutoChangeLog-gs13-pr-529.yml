@@ -1,0 +1,9 @@
+author: "Swan"
+delete-after: True
+changes:
+  - rscadd: "Enables the handheld weight analyzer - basically a scale which you can hold and use in your hands."
+  - rscadd: "The plumbing feeder and milker will no longer put/take reagents from the bloodstream"
+  - bugfix: "fixes the plumbing feeder and milker not having sprites in the plumbing constructor"
+  - bugfix: "fixes the plumbing feeder and milker droping iron when collected with the plumbing constructor"
+  - bugfix: "fixes the weighing scale sometimes not tracking the weight of its occupant correctly. The \"last reading\" will now also update in real time as weight changes."
+  - bugfix: "fixes breasts sometimes not producing reagents after spawning"

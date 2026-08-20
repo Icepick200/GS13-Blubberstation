@@ -35,7 +35,7 @@
 		return
 
 	switch (fatness)
-		if (0 to FATNESS_LEVEL_FATTER)
+		if (FATNESS_LEVEL_NONE to FATNESS_LEVEL_FATTER)
 			say(pick(
 				"Looking good!",
 				"All Healthy Here!",
@@ -43,7 +43,7 @@
 				"Nice bod!"))
 			icon_state = "heft_scale_normal"
 			playsound(src, 'sound/machines/ping.ogg', 60, 1)
-		if (FATNESS_LEVEL_FATTER to FATNESS_LEVEL_EXTREMELY_OBESE)
+		if (FATNESS_LEVEL_FATTER to FATNESS_LEVEL_OBESE)
 			say(pick(
 				"Looking kinda' chunky there!",
 				"Woah, seems you've packed on a few pounds!",
@@ -51,13 +51,21 @@
 				"May I suggest eating a salad?"))
 			icon_state = "heft_scale_chubby"
 			playsound(src, 'sound/machines/beep/twobeep.ogg', 60, 1)
+		if (FATNESS_LEVEL_OBESE to FATNESS_LEVEL_EXTREMELY_OBESE)
+			say(pick(
+				"Hey there... I didn't recognize you with all that extra fluff!",
+				"Working on your love handles?",
+				"Have you considered applying to the cow milking program? You'd be a great fit!",
+				"Clothes feeling snug? I hear the ClothesMate has some great threads in plus sizes!"))
+			icon_state = "heft_scale_overweight"
+			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 60, 1)
 		if (FATNESS_LEVEL_EXTREMELY_OBESE to FATNESS_LEVEL_IMMOBILE)
 			say(pick(
 				"Careful! You almost +BROKE+ me there!",
 				"I just registered a 4.0 on the richter scale. +You+ wouldn't happen to know anything about that would you?",
 				"Hey! This unit isn't meant to weigh livestock! Get off!",
-				"Heeeelp! Pressure damage detected!"))
-			icon_state = "heft_scale_overweight"
+				"Warning! Pressure damage detected!"))
+			icon_state = "heft_scale_obese"
 			playsound(src, 'sound/machines/buzz/buzz-two.ogg', 60, 1)
 		if (FATNESS_LEVEL_IMMOBILE to INFINITY)	// TODO: missing heft_scale_obese level
 			say(pick(
@@ -70,6 +78,27 @@
 	
 	addtimer(VARSET_CALLBACK(src, icon_state, "heft_scale_off"), (10 SECONDS))
 	TIMER_COOLDOWN_START(src, COOLDOWN_RESPONSE, (10 SECONDS))
+
+/obj/machinery/heft_scale/update_icon_state()
+	if(panel_open)
+		icon_state = "heft_scale_open"
+	else
+		icon_state = "heft_scale_off"
+	
+	return ..()
+
+/obj/machinery/heft_scale/wrench_act(mob/living/user, obj/item/tool)
+	default_unfasten_wrench(user, tool)
+	return ITEM_INTERACT_SUCCESS
+
+/obj/machinery/heft_scale/crowbar_act(mob/living/user, obj/item/tool)
+	default_deconstruction_crowbar(user, tool)
+	return ITEM_INTERACT_SUCCESS
+
+/obj/machinery/heft_scale/screwdriver_act(mob/living/user, obj/item/item)
+	TIMER_COOLDOWN_END(src, COOLDOWN_RESPONSE)
+	default_deconstruction_screwdriver(user, item)
+	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/heft_scale/ui_interact(mob/user)
 	scale_component.ui_interact(user)

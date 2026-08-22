@@ -1,4 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "replaces the progress bar moth with the gatito"

@@ -1,0 +1,5 @@
+author: "Swan"
+delete-after: True
+changes:
+  - rscadd: "Ports the HEF-T Scale from WG13"
+  - code_imp: "turns scale behavior into a component, which can be applied onto ANYTHING."

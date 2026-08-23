@@ -44,3 +44,7 @@
 2026-08-22:
   Swan:
   - rscadd: replaces the progress bar moth with the gatito
+2026-08-23:
+  Swan:
+  - rscadd: Ports the HEF-T Scale from WG13
+  - code_imp: turns scale behavior into a component, which can be applied onto ANYTHING.

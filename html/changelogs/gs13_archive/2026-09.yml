@@ -48,3 +48,7 @@
 2026-09-20:
   Swan:
   - bugfix: fixes GT consultant icon not showing up in the orbit menu
+2026-09-22:
+  Swan:
+  - bugfix: fixes a mood debuff being applied when players nutrition is very high
+  - bugfix: fixes the round not restarting after a map vote concludes with no votes

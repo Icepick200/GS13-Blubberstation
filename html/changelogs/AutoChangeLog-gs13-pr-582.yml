@@ -1,5 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - bugfix: "fixes a mood debuff being applied when players nutrition is very high"
-  - bugfix: "fixes the round not restarting after a map vote concludes with no votes"

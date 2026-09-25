@@ -125,22 +125,10 @@
 	var/mob/living/carbon/carbon_user = user
 	carbon_user.reduce_fullness(rand(4,16), FALSE)
 
-/datum/emote/living/burp/bubble
+/datum/emote/living/burp/belch/bubble
 	key = "bubelch"
-	key_third_person = "belches loudly"
-	message = "belches."
-	reduction_min = 60
-	reduction_max = 80
 
-/datum/emote/living/burp/bubble/get_sound_gs13()
-	return pick('modular_gs/sound/voice/belch1.ogg', 'modular_gs/sound/voice/belch2.ogg',
-				'modular_gs/sound/voice/belch3.ogg', 'modular_gs/sound/voice/belch4.ogg',
-				'modular_gs/sound/voice/belch5.ogg', 'modular_gs/sound/voice/belch6.ogg',
-				'modular_gs/sound/voice/belch7.ogg', 'modular_gs/sound/voice/belch8.ogg',
-				'modular_gs/sound/voice/belch9.ogg', 'modular_gs/sound/voice/belch10.ogg',
-				'modular_gs/sound/voice/belch11.ogg')
-
-/datum/emote/living/burp/bubble/run_emote(mob/living/user, params, type_override, intentional)
+/datum/emote/living/burp/belch/bubble/run_emote(mob/living/user, params, type_override, intentional)
 	. = ..()
 	if(!ishuman(user))
 		return

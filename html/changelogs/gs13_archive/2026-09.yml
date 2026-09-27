@@ -74,3 +74,7 @@
   Swan:
   - rscadd: Added the Salamander and Matador guns, which are fattening weapons that
       also deal stamina damage. Obtainable through cargo and the traitor uplink
+2026-09-27:
+  Throughawaynadir:
+  - rscadd: Added feeders mini energy crossbow to OPFOR panel
+  - rscadd: Added feeders mini energy crossbow to traitor uplink

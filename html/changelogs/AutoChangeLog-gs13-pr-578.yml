@@ -1,0 +1,6 @@
+author: "Swan"
+delete-after: True
+changes:
+  - rscadd: "unit test for checking helplessness mechanics"
+  - rscadd: "adds configs which allow admins to force helplessness prefs to kick in above certain weights. Can only be prevented by using the MOD mobility module, or being in one of the ERP areas (ghost cafe, dorms, etc.)"
+  - bugfix: "fixes XWG causing exponential increase in weight in pounds"

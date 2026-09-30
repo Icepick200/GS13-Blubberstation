@@ -7422,6 +7422,8 @@
 #include "modular_gs\code\game\objects\items\fat_plushies.dm"
 #include "modular_gs\code\game\objects\items\holosign_creator.dm"
 #include "modular_gs\code\game\objects\items\plushes.dm"
+#include "modular_gs\code\game\objects\items\reagent_containers.dm"
+#include "modular_gs\code\game\objects\items\robot_upgrades.dm"
 #include "modular_gs\code\game\objects\items\RSF.dm"
 #include "modular_gs\code\game\objects\items\toys.dm"
 #include "modular_gs\code\game\objects\items\devices\scannners\health_analyzer.dm"

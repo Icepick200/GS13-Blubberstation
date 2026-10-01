@@ -1,0 +1,5 @@
+author: "evilew"
+delete-after: True
+changes:
+  - map: "Kilo: fixed a missing blueshield area, seperated duplicated aft corridors around sec/engie, placed APCs appropriately, moved the plasma sheets elsewhere (they always just turn into plasma)"
+  - map: "fixed disposals on GATO Fast Food"

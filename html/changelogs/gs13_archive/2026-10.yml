@@ -8,3 +8,9 @@
   - rscadd: Re-added belch/wg trap spells and spellbooks, wand of gluttony, and the
       cream demon.
   - refactor: Turns candyland plants into actual flora that can be harvested.
+2026-10-02:
+  evilew:
+  - map: 'Kilo: fixed a missing blueshield area, seperated duplicated aft corridors
+      around sec/engie, placed APCs appropriately, moved the plasma sheets elsewhere
+      (they always just turn into plasma)'
+  - map: fixed disposals on GATO Fast Food

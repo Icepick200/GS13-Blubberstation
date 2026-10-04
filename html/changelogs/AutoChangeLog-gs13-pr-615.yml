@@ -1,0 +1,4 @@
+author: "Swan"
+delete-after: True
+changes:
+  - bugfix: "fixes fullness not affecting belly size when wearing modular items"

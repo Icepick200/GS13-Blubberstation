@@ -14,3 +14,11 @@
       around sec/engie, placed APCs appropriately, moved the plasma sheets elsewhere
       (they always just turn into plasma)'
   - map: fixed disposals on GATO Fast Food
+2026-10-05:
+  Swan:
+  - bugfix: fixes fullness not affecting belly size when wearing modular items
+  - rscadd: reworks (and fixes) radiotropic metabolism. Its per baseline per second
+      WG is now affected by the light level of the turf on which the mob is. It should
+      now also properly protect from radiation
+  - bugfix: fixes fizz wizz and sootheseltz not having crushed sprites
+  - bugfix: fixes galbanic compound addiction triggering very quickly

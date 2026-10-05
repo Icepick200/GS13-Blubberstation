@@ -1,6 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "reworks (and fixes) radiotropic metabolism. Its per baseline per second WG is now affected by the light level of the turf on which the mob is. It should now also properly protect from radiation"
-  - bugfix: "fixes fizz wizz and sootheseltz not having crushed sprites"
-  - bugfix: "fixes galbanic compound addiction triggering very quickly"

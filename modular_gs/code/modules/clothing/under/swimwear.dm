@@ -53,7 +53,7 @@
 		modular_icon_state = modular_icon + "-" + num2text(i)
 		add_modular_overlay(user, modular_icon_state, modular_layer, suit_colors[i])
 
-/obj/item/clothing/under/dual_tone/swimsuit/get_belly_size(obj/item/organ/genital/belly)
+/obj/item/clothing/under/dual_tone/swimwear/get_belly_size(obj/item/organ/genital/belly)
 	var/size = belly.genital_size
 	var/shape = "soft"
 	var/stuffed_modifier = 0

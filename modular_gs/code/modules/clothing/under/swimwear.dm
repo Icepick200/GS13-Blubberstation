@@ -52,3 +52,28 @@
 	for (var/i = 1, i < 3, i++) // layering hell because god hates spriters.
 		modular_icon_state = modular_icon + "-" + num2text(i)
 		add_modular_overlay(user, modular_icon_state, modular_layer, suit_colors[i])
+
+/obj/item/clothing/under/dual_tone/swimsuit/get_belly_size(obj/item/organ/genital/belly)
+	var/size = belly.genital_size
+	var/shape = "soft"
+	var/stuffed_modifier = 0
+
+	if(istype(belly.bodypart_overlay.sprite_datum, /datum/sprite_accessory/genital/belly))
+		shape = "soft"
+	if(istype(belly.bodypart_overlay.sprite_datum, /datum/sprite_accessory/genital/belly/round))
+		shape = "round"
+	if(istype(belly.bodypart_overlay.sprite_datum, /datum/sprite_accessory/genital/belly/smooth_noarms))
+		shape = "smoothnoarms"
+
+	switch(belly.owner.fullness)
+		if(FULLNESS_LEVEL_BLOATED to FULLNESS_LEVEL_BEEG)
+			stuffed_modifier = 0
+		if(FULLNESS_LEVEL_BEEG to FULLNESS_LEVEL_NOMOREPLZ)
+			stuffed_modifier = 1
+		if(FULLNESS_LEVEL_NOMOREPLZ to INFINITY)
+			stuffed_modifier = 2
+
+	size += stuffed_modifier
+	size = min(size, 9)
+
+	return "[shape]_[size]"
